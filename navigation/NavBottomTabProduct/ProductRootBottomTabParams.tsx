@@ -2,6 +2,8 @@ import React from "react";
 import ShopScreen from "../../screen/ShopScreen";
 import ExploreScreen from '../../screen/ExploreScreen'
 import CartScreen from "../../screen/CartScreen";
+import { AccountStack } from "../navStackAccount/AccountStack"
+import AccountScreen from "../../screen/AccountScreen";
 import { Image} from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome';
 
@@ -10,13 +12,15 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 export enum ProductScreenEnum {
     ShopScreen = 'ShopScreen',
     ExploreScreen = 'ExploreScreen',
-    CartScreen = 'CartScreen'
+    CartScreen = 'CartScreen',
+    AccountStack = 'AccountStack'
 }
 
 export type ProductRootBottomTabParams = {
     ShopScreen: undefined;
     ExploreScreen: undefined;
     CartScreen : undefined;
+    AccountStack : undefined
 }
 
 // creat a type
@@ -37,6 +41,11 @@ export const ProductRootBottomTabScreens : any[] = [
         id : 3, name: ProductScreenEnum.CartScreen,
         component : CartScreen , option: { headerShown: false, tabBarLabel: 'Cart',
         tabBarIcon: ({color,size}) => <Icon name="tag" size={size} color={color}/>}
-    }
+    },
+    {
+        id : 4, name: ProductScreenEnum.AccountStack,
+        component : AccountStack , option: { headerShown: false, tabBarLabel: 'Account',
+        tabBarIcon: ({color,size}) => <Icon name="user" size={size} color={color}/>}
+    },
 
 ]
