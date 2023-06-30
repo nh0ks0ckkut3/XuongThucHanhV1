@@ -16,8 +16,8 @@ const BtnBack = (props) => {
         </View>
   )
 }
-export default BtnBack;
 
+export default BtnBack;
 const styles = StyleSheet.create({
   div_arrow : {
     paddingTop : 24.5,
